@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css"></style>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+	{% load static %}
+	<script type="module" src="{% static 'Profile/module-dashboard.js' %}"></script>
+
+    <title>module_dashboard</title>
+
+</head>
+
+<body style="background-color: lightgrey;">
+		<div class="row">
+		<div class="col-sm-12">
+			<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example" style="margin-right: 0%;">
+				<div class="container-fluid">
+                    <img src="https://www.mapmystudy.com/uploaded_files/university/big/logo-University_of_Birmingham-2020_08_10_11_46_08.png"
+			class="img-fluid" 
+			alt="picture" 
+			width="75" 
+			height="75" 
+			style="margin-top: 10px;margin-left: 10px;">
+                    
+            <h2 style="margin-top: 15px;margin-left: 10px;color: aliceblue;">Module Dashboard</h2>
+				  <div class="collapse navbar-collapse" id="navbarsExample02">
+					<ul class="navbar-nav me-auto">
+					  <li class="nav-item" style="margin-left: 550px;">
+						<a class="nav-link active" aria-current="page" style="color: aliceblue;"href="https://ustudy.bham.team/post-video/">Post video</a>
+					  </li>
+					  <li class="nav-item" style="margin-left: 100px;">
+						<a class="nav-link" style="color: aliceblue;" href="https://ustudy.bham.team/list-videos/?type=saved">Saved video</a>
+					  </li>
+					  <li class="nav-item" style="margin-left: 100px;">
+						<a class="nav-link" style="color: aliceblue;" href="https://ustudy.bham.team/list-videos/?type=posted">My videos</a>
+					  </li>
+					</ul>
+				  </div>
+				  <a href="https://ustudy.bham.team/user-profile/" class="button"><img src="https://cdn.discordapp.com/attachments/937419795949822006/955858149963882556/usuario-3.png" 
+					alt="picture" width="75" height="75"></a>
+				</div>
+			</nav>
+        </div>
+	</div>
+
+    <div class="row" style="margin-top: 20px;margin-left: 200px;height: 550px;width: 1550px;">
+        <div class="col-sm-9" id="main-container" style="background-color: skyblue;border:solid;">
+			
+        </div>
+    </div>
+</body>
+
+</html>

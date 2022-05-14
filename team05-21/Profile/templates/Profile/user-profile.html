@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+    {% load static %}
+    <script type="module" src="{% static 'Profile/user-profile.js' %}"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+	<style type="text/css"></style>
+  </head>
+
+
+  <body style="background-color: lightgrey;">
+	<div class="row">
+		<div class="col-sm-12">
+			<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example" style="margin-right: 0%;">
+				<div class="container-fluid">
+                    <img src="https://www.mapmystudy.com/uploaded_files/university/big/logo-University_of_Birmingham-2020_08_10_11_46_08.png"
+                    class="img-fluid" 
+                    alt="picture" 
+                    width="75" 
+                    height="75"
+                    style="margin-top: 10px;margin-left: 10px;">
+                    
+                <h2 style="margin-top: 15px;margin-left: 10px;color: aliceblue;">My profile</h2>
+
+				<div class="collapse navbar-collapse" id="navbarsExample02">
+					<ul class="navbar-nav me-auto">
+					  <li class="nav-item" style="margin-left: 650px;">
+						<a class="nav-link active" aria-current="page" style="color: aliceblue;" href="https://ustudy.bham.team/post-video/">Post video</a>
+					  </li>
+					  <li class="nav-item" style="margin-left: 100px;">
+						<a class="nav-link" href="https://ustudy.bham.team/list-videos/?type=saved" style="color: aliceblue;">Saved video</a>
+					  </li>
+					  <li class="nav-item" style="margin-left: 100px;">
+						<a class="nav-link" href="https://ustudy.bham.team/list-videos/?type=posted" style="color: aliceblue;">My videos</a>
+					  </li>
+					</ul>
+				</div>
+
+				<a href="https://ustudy.bham.team/user-profile/"  class="button"><img src="https://cdn.discordapp.com/attachments/937419795949822006/955858149963882556/usuario-3.png" 
+					alt="picture" width="75" height="75"></a>
+				</div>
+			</nav>
+        </div>
+	</div>
+
+  <div class="row" style="margin-top: 5%;margin-left: 10%;">
+		<div class="col-sm-3" style="background-color: skyblue;border:solid;margin-left: 75px;border-radius:5px;">
+            <div class="d-flex justify-content-center">
+                <img src="https://cdn.discordapp.com/attachments/937419795949822006/955858149963882556/usuario-3.png" alt="picture" class="img-fluid" width="200" height="200">
+            </div>
+
+            <div style="margin-top: 10%;">
+                <p style="display: inline;font-weight: bold;">Username:</p><p id="username" style="display: inline;"></p>
+            </div>
+            <div style="margin-top: 7%;">
+                <p style="display: inline;font-weight: bold;">Year:</p><p id="year" style="display: inline;"></p>
+            </div>
+            <div style="margin-top: 7%;">
+                <p style="display: inline;font-weight: bold;">Email:</p><p id="email" style="display: inline;"></p>
+            </div>
+
+		</div>
+
+        <div class="col-sm-6" style="background-color:yellow;border:solid;margin-left: 25px;border-radius:5px;" id="main-container">
+
+            <div class="d-flex justify-content-center">
+                <input type="button"， value="Module Dashboard" style="width: 200px;height: 50px;font-size: medium;margin-top: 5%;" onclick="window.location.href='https://ustudy.bham.team/module-dashboard/' "/>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <input id="change-appearance" type="button"， value="Change apperance" style="width: 200px;height: 50px;font-size: medium;margin-top: 35px;"/>
+            </div>
+ 
+            <div class="d-flex justify-content-center">
+                <input type="button"， value="Edit profile" style="width: 200px;height: 50px;font-size: medium;margin-top: 35px;" onclick="window.location.href='https://ustudy.bham.team/edit-profile/' "/>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <input type="button"， value="Log out" style="width: 200px;height: 50px;font-size: medium;margin-top: 35px;margin-bottom: 5%;" onclick="window.location.href='https://ustudy.bham.team/logout' "/>
+            </div>
+        </div>
+	</div>
+
+  </body>
+</html>

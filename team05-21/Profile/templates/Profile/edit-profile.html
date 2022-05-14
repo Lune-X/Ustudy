@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    {% load static %}
+    <script type="module" src="{% static 'Profile/edit-profile.js' %}"></script>
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<style type="text/css"></style>
+  </head>
+
+
+  <body style="background-color: lightgrey;">
+	<div class="row">
+		<div class="col-sm-12">
+			<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example" style="margin-right: 0%;">
+				<div class="container-fluid">
+                    <img src="https://www.mapmystudy.com/uploaded_files/university/big/logo-University_of_Birmingham-2020_08_10_11_46_08.png"
+                    class="img-fluid" 
+                    alt="picture" 
+                    width="75" 
+                    height="75" 
+                    style="margin-top: 10px;margin-left: 10px;">
+                    
+                <h2 style="margin-top: 15px;margin-left: 10px;color: aliceblue;">Edit profile</h2>
+
+				<div class="collapse navbar-collapse" id="navbarsExample02">
+					<ul class="navbar-nav me-auto">
+					  <li class="nav-item" style="margin-left: 650px;">
+						<a class="nav-link active" aria-current="page" style="color: aliceblue;" href="https://ustudy.bham.team/post-video/">Post video</a>
+					  </li>
+					  <li class="nav-item" style="margin-left: 100px;">
+						<a class="nav-link" href="https://ustudy.bham.team/list-videos/?type=saved" style="color: aliceblue;">Saved video</a>
+					  </li>
+					  <li class="nav-item" style="margin-left: 100px;">
+						<a class="nav-link" href="https://ustudy.bham.team/list-videos/?type=posted" style="color: aliceblue;">My videos</a>
+					  </li>
+					</ul>
+				</div>
+
+				<a href="https://ustudy.bham.team/user-profile/" class="button"><img src="https://cdn.discordapp.com/attachments/937419795949822006/955858149963882556/usuario-3.png" 
+					alt="picture" width="75" height="75"></a>
+				</div>
+			</nav>
+        </div>
+	</div>
+
+    <div class="row" style="margin-top: 5%;margin-left: 8%;">
+		<div class="col-sm-4" style="margin-left: 25px;">
+			<div class="d-flex justify-content-center">
+                <img src="https://cdn.discordapp.com/attachments/937419795949822006/955858149963882556/usuario-3.png" alt="picture" style="margin-top: 20%;"class="img-fluid" width="200" height="200">
+            </div>
+
+            
+		</div>
+
+
+		<div class="col-sm-6" style="background-color: rgb(247, 246, 229);border:solid;margin-left: 25px;" id="main-container">
+			<form name="post" action="javascript:void(0);" class="col-sm-9" style='margin-left:15%;margin-top: 15%;'>
+        {% csrf_token %}
+                <div class="form-group form-inline">
+                    <label for="username" class="col-sm-3 control-label no-padding-right" style="font-size: 25px;">Username:</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="username" class="col-xs-10 col-sm-9" placeholder="Please enter the username">
+                    </div>
+                </div>
+                <div class="form-group"></div>
+                <div class="form-group form-inline">
+                    <label for="Password" class="col-sm-3 control-label no-padding-right" style="font-size: 25px;">Password:</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="password" class="col-xs-10 col-sm-9" placeholder="Please enter the password">
+                    </div>
+                </div>
+
+                <div class="form-group"></div>
+                <div class="form-group form-inline">
+                    <label for="Email address" class="col-sm-3 control-label no-padding-right" style="font-size: 25px;">Email address:</label>
+                    <div class="col-sm-9">
+                        <input type="email" id="email" class="col-xs-10 col-sm-9" placeholder="Please enter the Email address">
+                    </div>
+                </div>
+
+                <div class="form-group"></div>
+                <div class="form-group form-inline" >
+                  <div class="col-sm-offset-2 col-sm-8">
+                  <button id="year" style="width:375px;height: 40px;;font-size: medium;">Change Your Year</button>
+                  </div>
+                </div>
+                
+
+                <div class="form-group"></div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button id="changeprofile" name="changeprofile" value="submit" style="width: 60px;height: 35px;;font-size: medium;margin-left: 100%;"/>Submit</div>
+                    </div>
+                </div>
+            </form>
+		</div>
+	</div>
+  </body>
+</html>

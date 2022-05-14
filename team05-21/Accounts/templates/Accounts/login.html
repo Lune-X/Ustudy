@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.background{
+			background-color: skyblue;
+			border:solid;
+
+		}
+		h2{
+			text-align:center;
+		}
+
+	</style>
+	<title>login</title>
+  </head>
+
+  <body>
+
+	<div class="row" style="margin-top: 150px;">
+		<div class="col-sm-4" style="text-align: center;margin-top: 75px;">
+				<img src="https://gss0.baidu.com/70cFfyinKgQFm2e88IuM_a/baike/pic/item/4034970a304e251f0cd4caf6a486c9177f3e5398.jpg" 
+				class="img-fluid"
+				alt="picture" 
+				style="top: 200px;left:200px">
+		</div>
+
+		<div class="col-sm-6">
+			<div class="background" style="border-radius:5px;">
+
+				<div class="row" style="margin-bottom: 50px;">
+					<div class="col-sm-12">
+						<h2 >UStudy - Make the most of your academic journey!</h2>
+					</div>
+				</div>
+
+				<div class="row" style="margin-bottom: 100px;">
+					<form name="user" action="/login/submit-form/" method="post" class="col-sm-9" style='margin: 0 auto;background-color:rgba(211, 211, 211, 0.781);border-radius:5px;'>
+						{% csrf_token %}
+						<div class="form-group"></div>
+						<div class="form-group form-inline">
+						    <label for="username" class="col-sm-3 control-label no-padding-right">Username:</label>
+							<div class="col-sm-9">
+								<input type="text", name="username", class="col-xs-10 col-sm-9" placeholder="Please enter the username">
+							</div>
+						</div>
+						<div class="form-group form-inline">
+							<label for="password" class="col-sm-3 control-label no-padding-right">Password:</label>
+							<div class="col-sm-9">
+								<input type="password", name="password", id="password", class="col-xs-10 col-sm-9" placeholder="Please enter the password">
+							</div>
+						</div>
+
+						<div class="checkbox form-inline form-group">
+							<input   type="checkbox"   value="1" id="GDPR" name="GDPR" style="margin-left: 100px;"/>
+							<label for="GDPR"> Agree to <a href="/gdpr/">&nbsp;Terms and Conditions</a></label>
+						</div>
+						<div class="form-group form-inline">
+							<input type="submit" name="login" value="Login" style="width: 60px;height: 35px;font-size: medium;margin-bottom: 10px;margin-left: 100px;" onclick=checkGDPR()/>
+							<input type="button" name="Sign up" value="Sign up" style="width: 70px;height: 35px;font-size: medium;margin-bottom: 10px;margin-left:100px;" onclick="redirectFunc()"/>
+                            <script>
+								function checkGDPR() {
+									if (document.getElementById("GDPR").checked) {
+										return;
+									}
+									//alert("You must agree to ")
+									// TODO: how
+								}
+
+                                  function redirectFunc() {
+                                      window.location.href=window.location.protocol + "//" + window.location.host + "/register/";
+                                  }
+                            </script>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+
+
+</html>

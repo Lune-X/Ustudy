@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<style type="text/css"></style>
+
+	<!-- {% load static %} -->
+    <script type="module" src="{% static 'Videos/post-video.js' %}"></script>
+  </head>
+
+  <body style="background-color: lightgrey;">
+	<div class="row">
+		<div class="col-sm-12">
+			<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example" style="margin-right: 0%;">
+				<div class="container-fluid">
+                    <img src="https://www.mapmystudy.com/uploaded_files/university/big/logo-University_of_Birmingham-2020_08_10_11_46_08.png"
+			            class="img-fluid" 
+			            alt="picture" 
+			            width="75" 
+			            height="75" 
+			            style="margin-top: 10px;margin-left: 10px;">
+                    
+            <h2 style="margin-top: 15px;margin-left: 10px;color: aliceblue;">Post a video!</h2>
+				  <div class="collapse navbar-collapse" id="navbarsExample02">
+					<ul class="navbar-nav me-auto">
+					  <li class="nav-item" style="margin-left: 650px;">
+						<a class="nav-link active" aria-current="page" style="color: aliceblue;" href="https://ustudy.bham.team/post-video/">Post video</a>
+					  </li>
+					  <li class="nav-item" style="margin-left: 100px;">
+						<a class="nav-link" href="https://ustudy.bham.team/list-videos/?type=saved" style="color: aliceblue;">Saved video</a>
+					  </li>
+					  <li class="nav-item" style="margin-left: 100px;">
+						<a class="nav-link" href="https://ustudy.bham.team/list-videos/?type=posted" style="color: aliceblue;">My videos</a>
+					  </li>
+					</ul>
+				  </div>
+				  <a href="https://ustudy.bham.team/user-profile/" class="button"><img src="https://cdn.discordapp.com/attachments/937419795949822006/955858149963882556/usuario-3.png" 
+					alt="picture" width="75" height="75"></a>
+				</div>
+			</nav>
+        </div>
+	</div>
+
+	<div class="row justify-content-center" style="margin-top: 20px;">
+		<div class="col-lg-6" style="background-color: skyblue;border:solid;margin-left: 25px;margin-right: 25px;" id="main-container">
+			<div class="row">
+				<form id="form" name="post" action="javascript:void(0);" class="col-sm-9">
+					<div class="form-group"></div>
+					<div class="form-group form-inline">
+						<label for="Title" class="col-sm-3 control-label no-padding-right" style="font-size: 25px;">Title:</label>
+						<div class="col-sm-9">
+							<input type="text" id="title" class="col-xs-10 col-sm-9" placeholder="Please enter the title">
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label for="link" class="col-sm-3 control-label no-padding-right" style="font-size: 25px;">Url link:</label>
+						<div class="col-sm-9">
+							<input type="url" id="url" class="col-xs-10 col-sm-9" placeholder="Please enter the Url link">
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label for="Description" class="col-sm-3 control-label no-padding-right" style="font-size: 25px;">Description:</label>
+						<div class="col-sm-9">
+							<textarea  id="description" rows="10" cols="40"  placeholder="please enter the video description"></textarea>
+						</div>
+					</div>
+					<div class="form-group form-inline">
+						<label for="modules" class="col-sm-3 control-label no-padding-right" style="font-size: 25px;">Modules:</label>
+						<div class="col-sm-9">
+							<select id="modules" class="form-control" multiple>
+								<!--<option value="College of Arts and Law">College of Arts and Law</option>
+								<option value="Engineering and Physical Sciences">Engineering and Physical Sciences</option>
+								<option value="Life and Environmental Sciences">Life and Environmental Sciences</option>
+								<option value="Medical and Dental Sciences">Medical and Dental Sciences</option>
+								<option value="Social Sciences">Social Sciences</option>-->
+							</select>
+						</div>
+					</div>
+					<div class="checkbox form-inline form-group">
+							<input   type="checkbox"   value="1" id="subtitles" name="includes subtitles"/>
+					        <label for="subtitles">Includes subtitles</label>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<input type="submit" id="post-button" name="post" value="post" style="width: 60px;height: 35px;;font-size: medium;"/>
+						</div>
+					</div>
+				</form>	
+			</div>
+		</div>
+
+		<!-- <div class="col-sm-5" style="background-color: lightgrey;border:solid;margin-left: 25px;" >
+
+				<div class="form-group">
+					<label for="inputfile">File input</label>
+					<input type="file" id="inputfile">
+				</div>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+						<input type="submit" name="post" value="post" style="width: 60px;height: 35px;;font-size: medium;"/>
+					</div>
+				</div>
+		</div> -->
+	</div>
+
+  </body>
+  <script src="post-video.js"></script>
+</html>
+
